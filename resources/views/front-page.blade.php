@@ -9,6 +9,7 @@
   @include('sections.home.hero')
   @include('sections.home.menu')
   @include('sections.home.about')
+  @include('sections.home.testimonials')
 
   @while (have_posts()) @php(the_post())
     @if (is_page() && trim(get_the_content()) !== '')

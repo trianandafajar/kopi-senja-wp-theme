@@ -148,4 +148,31 @@ class FrontPage extends Composer
             ],
         ];
     }
+
+    /**
+     * Placeholder testimonials.
+     *
+     * These are NOT real reviews. They only demonstrate the layout and
+     * should be replaced with genuine, consented customer feedback.
+     */
+    public function testimonials(): array
+    {
+        return [
+            [
+                'quote' => __('Contoh ulasan: tempat yang nyaman untuk bekerja di sore hari, dan es kopi susunya pas manisnya.', 'kopi-senja'),
+                'author' => __('Nama Pelanggan', 'kopi-senja'),
+                'meta' => __('Contoh testimoni', 'kopi-senja'),
+            ],
+            [
+                'quote' => __('Contoh ulasan: barista dengan senang hati menjelaskan karakter setiap biji sebelum diseduh.', 'kopi-senja'),
+                'author' => __('Nama Pelanggan', 'kopi-senja'),
+                'meta' => __('Contoh testimoni', 'kopi-senja'),
+            ],
+            [
+                'quote' => __('Contoh ulasan: biji sangrai untuk di rumah selalu segar dan wanginya memenuhi dapur.', 'kopi-senja'),
+                'author' => __('Nama Pelanggan', 'kopi-senja'),
+                'meta' => __('Contoh testimoni', 'kopi-senja'),
+            ],
+        ];
+    }
 }
