@@ -7,6 +7,7 @@
 
 @section('content')
   @include('sections.home.hero')
+  @include('sections.home.menu')
 
   @while (have_posts()) @php(the_post())
     @if (is_page() && trim(get_the_content()) !== '')
