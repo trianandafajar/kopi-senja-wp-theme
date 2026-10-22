@@ -1,0 +1,57 @@
+/*
+ * Kopi Senja — design tokens
+ *
+ * Shared by the front-end (app.css) and the block editor (editor.css).
+ * Every token declared here is emitted statically, so the Roots Vite
+ * plugin can copy the palette and font stacks into theme.json.
+ */
+
+/* Self-hosted variable fonts (bundled by Vite, no third-party requests) */
+@import "@fontsource-variable/fraunces";
+@import "@fontsource-variable/fraunces/wght-italic.css";
+@import "@fontsource-variable/plus-jakarta-sans";
+
+@theme static {
+  /* Start from a clean, brand-only palette */
+  --color-*: initial;
+
+  --color-white: #ffffff;
+
+  /* Espresso — deep roasted browns for text and dark surfaces */
+  --color-espresso-50: #f6efea;
+  --color-espresso-100: #e8d9cf;
+  --color-espresso-300: #b08a74;
+  --color-espresso-500: #7a5440;
+  --color-espresso-700: #4e3426;
+  --color-espresso-800: #3b261c;
+  --color-espresso-900: #2b1b14;
+  --color-espresso-950: #1c120d;
+
+  /* Cream — milk foam and paper tones for backgrounds */
+  --color-cream-50: #fdf9f3;
+  --color-cream-100: #f8f0e3;
+  --color-cream-200: #efe1c9;
+  --color-cream-300: #e3cca8;
+
+  /* Terracotta — the warm accent of a late-afternoon sky */
+  --color-terracotta-300: #eaa98d;
+  --color-terracotta-400: #dc7f5c;
+  --color-terracotta-500: #c8623f;
+  --color-terracotta-600: #a94d2f;
+  --color-terracotta-700: #873c25;
+
+  /* Supporting tones */
+  --color-karamel: #d9a35b;
+  --color-daun: #6f7d4f;
+
+  /* Typography */
+  --font-sans: "Plus Jakarta Sans Variable", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Fraunces Variable", ui-serif, Georgia, Cambria, serif;
+  --font-display: "Fraunces Variable", ui-serif, Georgia, Cambria, serif;
+
+  --text-display: clamp(2.75rem, 1.6rem + 4.6vw, 5.25rem);
+
+  --radius-card: 1.25rem;
+
+  --shadow-warm: 0 24px 48px -24px rgb(43 27 20 / 0.35);
+}

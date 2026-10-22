@@ -1,1 +1,12 @@
 @import "tailwindcss";
+@import "./theme.css";
+
+@layer base {
+  .editor-styles-wrapper {
+    @apply bg-cream-50 font-sans text-espresso-900;
+  }
+
+  .editor-styles-wrapper :is(h1, h2, h3, h4) {
+    @apply font-display font-semibold text-espresso-950;
+  }
+}

@@ -4,7 +4,8 @@
   "version": 3,
   "settings": {
     "layout": {
-      "contentSize": "48rem"
+      "contentSize": "46rem",
+      "wideSize": "72rem"
     },
     "background": {
       "backgroundImage": true
@@ -27,11 +28,77 @@
     },
     "spacing": {
       "padding": true,
-      "units": ["px", "%", "em", "rem", "vw", "vh"]
+      "units": [
+        "px",
+        "%",
+        "em",
+        "rem",
+        "vw",
+        "vh"
+      ]
     },
     "typography": {
       "defaultFontSizes": false,
       "customFontSize": false
+    }
+  },
+  "styles": {
+    "color": {
+      "background": "var(--wp--preset--color--cream-50)",
+      "text": "var(--wp--preset--color--espresso-900)"
+    },
+    "typography": {
+      "fontFamily": "var(--wp--preset--font-family--sans)",
+      "lineHeight": "1.7"
+    },
+    "elements": {
+      "heading": {
+        "typography": {
+          "fontFamily": "var(--wp--preset--font-family--display)",
+          "fontWeight": "600",
+          "lineHeight": "1.15"
+        },
+        "color": {
+          "text": "var(--wp--preset--color--espresso-950)"
+        }
+      },
+      "link": {
+        "color": {
+          "text": "var(--wp--preset--color--terracotta-600)"
+        },
+        ":hover": {
+          "color": {
+            "text": "var(--wp--preset--color--terracotta-700)"
+          }
+        }
+      },
+      "button": {
+        "color": {
+          "background": "var(--wp--preset--color--terracotta-500)",
+          "text": "var(--wp--preset--color--white)"
+        },
+        "border": {
+          "radius": "9999px"
+        },
+        ":hover": {
+          "color": {
+            "background": "var(--wp--preset--color--terracotta-600)"
+          }
+        }
+      }
+    },
+    "blocks": {
+      "core/quote": {
+        "border": {
+          "color": "var(--wp--preset--color--terracotta-400)",
+          "style": "solid",
+          "width": "0 0 0 3px"
+        },
+        "typography": {
+          "fontFamily": "var(--wp--preset--font-family--display)",
+          "fontStyle": "italic"
+        }
+      }
     }
   }
 }

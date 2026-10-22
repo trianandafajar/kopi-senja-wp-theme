@@ -1,4 +1,63 @@
 @import "tailwindcss" theme(static);
+@import "./theme.css";
+
 @source "../../app/**/*.php";
 @source "../**/*.blade.php";
 @source "../**/*.js";
+
+@utility shell {
+  width: 100%;
+  max-width: 72rem;
+  margin-inline: auto;
+  padding-inline: 1.25rem;
+
+  @variant md {
+    padding-inline: 2rem;
+  }
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-cream-50 font-sans text-espresso-900 antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-display font-semibold tracking-tight text-espresso-950;
+    font-optical-sizing: auto;
+  }
+
+  a {
+    @apply text-terracotta-600 underline-offset-4 transition-colors hover:text-terracotta-700;
+  }
+
+  ::selection {
+    @apply bg-terracotta-300 text-espresso-950;
+  }
+
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-terracotta-500;
+  }
+}
+
+@utility eyebrow {
+  @apply text-xs font-semibold tracking-[0.2em] text-terracotta-600 uppercase;
+}
+
+@utility btn {
+  @apply inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-semibold no-underline transition;
+}
+
+@utility btn-primary {
+  @apply btn bg-terracotta-500 text-white shadow-warm hover:bg-terracotta-600 hover:text-white;
+}
+
+@utility btn-ghost {
+  @apply btn border border-current text-cream-100 hover:bg-cream-100 hover:text-espresso-900;
+}

@@ -32,6 +32,12 @@ export default defineConfig({
       disableTailwindFonts: false,
       disableTailwindFontSizes: false,
       disableTailwindBorderRadius: false,
+      fontLabels: {
+        sans: 'Plus Jakarta Sans',
+        serif: 'Fraunces',
+        display: 'Fraunces (Display)',
+        mono: 'Monospace',
+      },
     }),
   ],
   resolve: {
