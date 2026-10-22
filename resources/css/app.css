@@ -61,3 +61,21 @@
 @utility btn-ghost {
   @apply btn border border-current text-cream-100 hover:bg-cream-100 hover:text-espresso-900;
 }
+
+@layer components {
+  .nav-primary .nav {
+    @apply m-0 flex list-none flex-col gap-1 px-5 py-4 md:flex-row md:items-center md:gap-7 md:p-0;
+  }
+
+  .nav-primary .nav a {
+    @apply block py-2 text-sm font-medium text-espresso-800 no-underline hover:text-terracotta-600;
+  }
+
+  .nav-primary :is(.current-menu-item, .current_page_item, .current-menu-ancestor) > a {
+    @apply text-terracotta-600;
+  }
+
+  .nav-primary .sub-menu {
+    @apply list-none pl-4 md:hidden;
+  }
+}
