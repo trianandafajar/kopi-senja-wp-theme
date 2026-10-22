@@ -10,6 +10,7 @@
   @include('sections.home.menu')
   @include('sections.home.about')
   @include('sections.home.testimonials')
+  @include('sections.home.visit')
 
   @while (have_posts()) @php(the_post())
     @if (is_page() && trim(get_the_content()) !== '')
