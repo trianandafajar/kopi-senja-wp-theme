@@ -127,4 +127,25 @@ class FrontPage extends Composer
             ],
         ];
     }
+
+    /**
+     * The "from bean to cup" steps shown in the about section.
+     */
+    public function process(): array
+    {
+        return [
+            [
+                'title' => __('Memilih', 'kopi-senja'),
+                'text' => __('Kami mencicipi sampel dari kelompok tani di berbagai daerah dan hanya memilih lot yang membuat kami tersenyum.', 'kopi-senja'),
+            ],
+            [
+                'title' => __('Menyangrai', 'kopi-senja'),
+                'text' => __('Disangrai dalam batch kecil di roastery belakang kedai, dua kali seminggu, agar selalu segar.', 'kopi-senja'),
+            ],
+            [
+                'title' => __('Menyeduh', 'kopi-senja'),
+                'text' => __('Setiap resep diuji ulang setiap pagi. Takaran, suhu, dan waktu, semuanya kami catat.', 'kopi-senja'),
+            ],
+        ];
+    }
 }
