@@ -84,7 +84,8 @@ add_action('after_setup_theme', function () {
      * @link https://developer.wordpress.org/reference/functions/register_nav_menus/
      */
     register_nav_menus([
-        'primary_navigation' => __('Primary Navigation', 'kopi-senja'),
+        'primary_navigation' => __('Navigasi Utama', 'kopi-senja'),
+        'footer_navigation' => __('Navigasi Footer', 'kopi-senja'),
     ]);
 
     /**
@@ -152,12 +153,13 @@ add_action('widgets_init', function () {
     ];
 
     register_sidebar([
-        'name' => __('Primary', 'kopi-senja'),
+        'name' => __('Sidebar Utama', 'kopi-senja'),
         'id' => 'sidebar-primary',
     ] + $config);
 
     register_sidebar([
         'name' => __('Footer', 'kopi-senja'),
+        'description' => __('Widget tambahan di bagian bawah footer.', 'kopi-senja'),
         'id' => 'sidebar-footer',
     ] + $config);
 });
