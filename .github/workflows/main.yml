@@ -54,6 +54,18 @@ jobs:
             exit 1
           }
 
+      - name: Validate Kopi Senja design tokens
+        run: |
+          jq -e '
+            [.settings.color.palette[].slug] as $colors |
+            [.settings.typography.fontFamilies[].slug] as $fonts |
+            (["espresso-900", "cream-50", "terracotta-500"] - $colors | length == 0) and
+            ($fonts | any(. == "display"))
+          ' public/build/assets/theme.json || {
+            echo "❌ Kopi Senja palette or display font missing from theme.json"
+            exit 1
+          }
+
   php:
     name: PHP ${{ matrix.php }}
     runs-on: ubuntu-latest
