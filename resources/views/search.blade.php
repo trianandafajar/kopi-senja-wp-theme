@@ -1,19 +1,30 @@
 @extends('layouts.app')
 
 @section('content')
-  @include('partials.page-header')
+  @include('partials.page-header', ['eyebrow' => __('Pencarian', 'kopi-senja')])
 
-  @if (! have_posts())
-    <x-alert type="warning">
-      {!! __('Sorry, no results were found.', 'kopi-senja') !!}
-    </x-alert>
+  <div class="shell py-16">
+    <div class="max-w-3xl">
+      <div class="mb-10 max-w-md">
+        {!! get_search_form(false) !!}
+      </div>
 
-    {!! get_search_form(false) !!}
-  @endif
+      @if (! have_posts())
+        <x-alert type="warning">
+          {!! __('Maaf, tidak ada hasil yang cocok. Coba kata kunci lain.', 'kopi-senja') !!}
+        </x-alert>
+      @endif
 
-  @while(have_posts()) @php(the_post())
-    @include('partials.content-search')
-  @endwhile
+      @while(have_posts()) @php(the_post())
+        @include('partials.content-search')
+      @endwhile
 
-  {!! get_the_posts_navigation() !!}
+      <div class="posts-pagination mt-10">
+        {!! get_the_posts_navigation([
+          'prev_text' => __('&larr; Hasil sebelumnya', 'kopi-senja'),
+          'next_text' => __('Hasil berikutnya &rarr;', 'kopi-senja'),
+        ]) !!}
+      </div>
+    </div>
+  </div>
 @endsection

@@ -97,3 +97,127 @@
     @apply text-terracotta-300 hover:text-terracotta-400;
   }
 }
+
+/* Long-form content: posts, pages and block editor output */
+@layer components {
+  .entry-content {
+    @apply text-lg leading-relaxed text-espresso-800;
+
+    & > * + * {
+      @apply mt-6;
+    }
+
+    & :is(h2, h3, h4) {
+      @apply mt-12 mb-4 leading-tight;
+    }
+
+    & h2 {
+      @apply text-3xl md:text-4xl;
+    }
+
+    & h3 {
+      @apply text-2xl;
+    }
+
+    & :is(ul, ol) {
+      @apply space-y-2 pl-6;
+    }
+
+    & ul {
+      @apply list-disc marker:text-terracotta-500;
+    }
+
+    & ol {
+      @apply list-decimal marker:font-semibold marker:text-terracotta-600;
+    }
+
+    & a {
+      @apply underline decoration-terracotta-300 decoration-2;
+    }
+
+    & blockquote {
+      @apply border-l-4 border-terracotta-400 pl-6 font-display text-2xl text-espresso-900 italic;
+    }
+
+    & :is(img, .wp-block-image img) {
+      @apply h-auto max-w-full rounded-card;
+    }
+
+    & figcaption {
+      @apply mt-2 text-center text-sm text-espresso-500;
+    }
+
+    & hr {
+      @apply my-12 border-espresso-900/15;
+    }
+
+    & :not(pre) > code {
+      @apply rounded bg-cream-200 px-1.5 py-0.5 text-[0.9em];
+    }
+
+    & pre {
+      @apply overflow-x-auto rounded-xl bg-espresso-950 p-5 text-sm text-cream-100;
+    }
+
+    & table {
+      @apply w-full border-collapse text-base;
+    }
+
+    & :is(th, td) {
+      @apply border-b border-espresso-900/10 px-3 py-2 text-left;
+    }
+  }
+
+  .posts-pagination .nav-links,
+  .page-nav {
+    @apply flex flex-wrap items-center justify-between gap-4 text-sm font-semibold;
+  }
+
+  .posts-pagination .nav-next {
+    @apply ml-auto;
+  }
+
+  .posts-pagination a {
+    @apply btn border border-espresso-900/15 text-espresso-900 hover:border-terracotta-500 hover:text-terracotta-600;
+  }
+
+  .comment-list {
+    @apply m-0 list-none space-y-6 p-0;
+
+    & .children {
+      @apply mt-6 list-none space-y-6 border-l-2 border-cream-300 pl-6;
+    }
+
+    & .comment-body {
+      @apply rounded-2xl bg-white/70 p-5 text-espresso-800;
+    }
+
+    & .comment-meta {
+      @apply mb-3 text-sm text-espresso-500;
+    }
+
+    & .avatar {
+      @apply mr-3 inline-block rounded-full align-middle;
+    }
+  }
+
+  .comment-respond {
+    @apply mt-12;
+
+    & .comment-reply-title {
+      @apply text-2xl;
+    }
+
+    & label {
+      @apply mb-1 block text-sm font-semibold text-espresso-900;
+    }
+
+    & :is(input[type="text"], input[type="email"], input[type="url"], textarea) {
+      @apply w-full rounded-xl border border-espresso-900/15 bg-white px-4 py-3 text-espresso-900 focus:border-terracotta-500 focus:outline-none;
+    }
+
+    & > form > p {
+      @apply mt-4;
+    }
+  }
+}

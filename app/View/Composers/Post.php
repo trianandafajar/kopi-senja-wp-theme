@@ -31,7 +31,7 @@ class Post extends Composer
                 return get_the_title($home);
             }
 
-            return __('Latest Posts', 'kopi-senja');
+            return __('Jurnal Terbaru', 'kopi-senja');
         }
 
         if (is_archive()) {
@@ -41,13 +41,13 @@ class Post extends Composer
         if (is_search()) {
             return sprintf(
                 /* translators: %s is replaced with the search query */
-                __('Search Results for %s', 'kopi-senja'),
+                __('Hasil pencarian untuk &ldquo;%s&rdquo;', 'kopi-senja'),
                 get_search_query()
             );
         }
 
         if (is_404()) {
-            return __('Not Found', 'kopi-senja');
+            return __('Halaman tidak ditemukan', 'kopi-senja');
         }
 
         return get_the_title();
@@ -60,7 +60,7 @@ class Post extends Composer
     {
         return wp_link_pages([
             'echo' => 0,
-            'before' => '<p>'.__('Pages:', 'kopi-senja'),
+            'before' => '<p>'.__('Halaman:', 'kopi-senja'),
             'after' => '</p>',
         ]);
     }
