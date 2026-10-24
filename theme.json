@@ -57,19 +57,6 @@
           "fontFamily": "var(--wp--preset--font-family--display)",
           "fontWeight": "600",
           "lineHeight": "1.15"
-        },
-        "color": {
-          "text": "var(--wp--preset--color--espresso-950)"
-        }
-      },
-      "link": {
-        "color": {
-          "text": "var(--wp--preset--color--terracotta-600)"
-        },
-        ":hover": {
-          "color": {
-            "text": "var(--wp--preset--color--terracotta-700)"
-          }
         }
       },
       "button": {
