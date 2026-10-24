@@ -16,6 +16,20 @@ class App extends Composer
     ];
 
     /**
+     * Data passed to the view.
+     *
+     * Values are resolved eagerly so arrays can be read with `$business['…']`
+     * in Blade; deferred public-method variables don't support array access.
+     */
+    protected function with(): array
+    {
+        return [
+            'siteName' => $this->siteName(),
+            'business' => $this->business(),
+        ];
+    }
+
+    /**
      * Retrieve the site name.
      */
     public function siteName(): string

@@ -17,6 +17,22 @@ class FrontPage extends Composer
     ];
 
     /**
+     * Data passed to the view.
+     *
+     * Values are resolved eagerly so the sections can read them as arrays.
+     */
+    protected function with(): array
+    {
+        return [
+            'hero' => $this->hero(),
+            'menu' => $this->menu(),
+            'beans' => $this->beans(),
+            'process' => $this->process(),
+            'testimonials' => $this->testimonials(),
+        ];
+    }
+
+    /**
      * Content for the hero section.
      */
     public function hero(): array
